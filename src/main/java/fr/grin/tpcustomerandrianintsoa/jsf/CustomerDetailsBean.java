@@ -6,10 +6,12 @@ package fr.grin.tpcustomerandrianintsoa.jsf;
 
 import fr.grin.tpcustomerandrianintsoa.ejb.CustomerManager;
 import fr.grin.tpcustomerandrianintsoa.entities.Customer;
+import fr.grin.tpcustomerandrianintsoa.entities.Discount;
 import java.io.Serializable;
 import jakarta.ejb.EJB;
 import jakarta.faces.view.ViewScoped;
 import jakarta.inject.Named;
+import java.util.List;
 
 /**
  *
@@ -52,6 +54,22 @@ private CustomerManager customerManager;
      * Creates a new instance of CustomerDetailsBean
      */
     public CustomerDetailsBean() {
+    }
+      /**
+   * Retourne la liste de tous les Discount.
+   */
+    public List<Discount> getDiscounts() {
+        return discountManager.getAllDiscounts();
+    }
+
+    private static class discountManager {
+
+        private static List<Discount> getAllDiscounts() {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+
+        public discountManager() {
+        }
     }
     
 }
